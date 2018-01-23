@@ -31,4 +31,4 @@ COPY ./entrypoint.sh /usr/local/bin/buildkite-agent-entrypoint
 
 VOLUME /buildkite
 ENTRYPOINT ["buildkite-agent-entrypoint"]
-CMD start
+CMD ["start"]
