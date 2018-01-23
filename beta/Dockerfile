@@ -18,8 +18,7 @@ RUN apk add --no-cache \
 ENV BUILDKITE_BUILD_PATH=/buildkite/builds \
     BUILDKITE_HOOKS_PATH=/buildkite/hooks \
     BUILDKITE_PLUGINS_PATH=/buildkite/plugins \
-
-ENV PACKER_VERSION=1.1.3 \
+    PACKER_VERSION=1.1.3 \
     PACKER_SHA256SUM=4e3d5e4c6a267e31e9f95d4c1b00f5a7be5a319698f0370825b459cb786e2f35
 
 RUN pip install docker-compose
