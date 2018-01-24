@@ -1,3 +1,4 @@
 #!/bin/bash
+-set e
 
-eval $(aws ecr get-login --no-include-email --region us-east-1)
+eval $(awss ecr get-login --no-include-email --region us-east-1)
