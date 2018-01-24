@@ -3,6 +3,7 @@ steps:
     label: ":hammer:docker-build:hammer:"
     agents:
       - "role=agent"
+
   - wait
 
   - command: ./.buildkite/scripts/tag.sh
@@ -21,3 +22,8 @@ steps:
           - /var/run/docker.sock:/var/run/docker.sock
     agents:
       - "role=agent"
+
+
+3mil
+0.003
+1000 = 1 core
