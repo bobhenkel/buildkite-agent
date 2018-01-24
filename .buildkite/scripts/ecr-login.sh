@@ -1,4 +1,4 @@
 #!/bin/bash
 set -e
 
-eval $(awss ecr get-login --no-include-email --region us-east-1)
+eval 'aws ecr get-login --no-include-email --region us-east-1' & wait $! ; echo status=$?
