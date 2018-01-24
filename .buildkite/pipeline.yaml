@@ -1,4 +1,9 @@
 steps:
+  - command: ./.buildkite/scripts/ecr-login.sh
+    label: ":hammer:docker-build:hammer:"
+    agents:
+      - "role=agent"
+
   - command: ./.buildkite/scripts/build.sh
     label: ":hammer:docker-build:hammer:"
     agents:
@@ -15,10 +20,5 @@ steps:
 
   - command: ./.buildkite/scripts/push.sh
     label: "push"
-    plugins:
-      docker#v1.1.0:
-        image: "docker:latest"
-        mounts:
-          - /var/run/docker.sock:/var/run/docker.sock
     agents:
       - "role=agent"
