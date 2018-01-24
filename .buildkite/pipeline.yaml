@@ -1,8 +1,10 @@
 steps:
   - command: ./.buildkite/scripts/ecr-login.sh
-    label: ":hammer:docker-build:hammer:"
+    label: "ecr-login"
     agents:
       - "role=agent"
+
+    - wait
 
   - command: ./.buildkite/scripts/build.sh
     label: ":hammer:docker-build:hammer:"
