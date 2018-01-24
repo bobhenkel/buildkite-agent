@@ -1,0 +1,7 @@
+command: #Validates we have the latest stable update applied
+  update_engine_client -check_for_update; sleep 5; update_engine_client -status | grep CURRENT_OP | cut -d= -f2:
+    # required attributes
+    exit-status: 0
+    # optional attributes
+    stdout:
+      - UPDATE_STATUS_IDLE
