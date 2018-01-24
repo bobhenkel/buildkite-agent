@@ -3,7 +3,6 @@ steps:
     label: ":hammer:docker-build:hammer:"
     agents:
       - "role=agent"
-
   - wait
 
   - command: ./.buildkite/scripts/tag.sh
@@ -11,9 +10,9 @@ steps:
     agents:
       - "role=agent"
 
- - wait
+  - wait
 
- - command: ./.buildkite/scripts/push.sh
-   label: "push"
-   agents:
-     - "role=agent"
+  - command: ./.buildkite/scripts/push.sh
+    label: "push"
+    agents:
+      - "role=agent"
