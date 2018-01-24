@@ -22,8 +22,3 @@ steps:
           - /var/run/docker.sock:/var/run/docker.sock
     agents:
       - "role=agent"
-
-
-3mil
-0.003
-1000 = 1 core
