@@ -14,5 +14,10 @@ steps:
 
   - command: ./.buildkite/scripts/push.sh
     label: "push"
+    plugins:
+      docker#v1.1.0:
+        image: "docker:latest"
+        mounts:
+          - /var/run/docker.sock:/var/run/docker.sock
     agents:
       - "role=agent"
