@@ -16,4 +16,4 @@ steps:
  - command: ./.buildkite/scripts/push.sh
    label: "push"
    agents:
-     - "role=agent
+     - "role=agent"
