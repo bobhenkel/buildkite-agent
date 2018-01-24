@@ -21,7 +21,7 @@ ENV BUILDKITE_BUILD_PATH=/buildkite/builds \
     PACKER_VERSION=1.1.3 \
     PACKER_SHA256SUM=b7982986992190ae50ab2feb310cb003a2ec9c5dcba19aa8b1ebb0d120e8686f
 
-RUN pip install docker-compose
+RUN pip install docker-compose awscli
 
 RUN curl -Lfs -o /usr/local/bin/buildkite-agent https://download.buildkite.com/agent/unstable/latest/buildkite-agent-linux-amd64 \
     && chmod +x /usr/local/bin/buildkite-agent \
