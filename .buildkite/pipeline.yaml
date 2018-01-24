@@ -4,7 +4,7 @@ steps:
     agents:
       - "role=agent"
 
-    - wait
+  - wait
 
   - command: ./.buildkite/scripts/build.sh
     label: ":hammer:docker-build:hammer:"
