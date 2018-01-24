@@ -35,6 +35,7 @@ RUN curl https://releases.hashicorp.com/packer/${PACKER_VERSION}/packer_${PACKER
     && rm -f packer_${PACKER_VERSION}_linux_amd64.zip
 
 COPY ./entrypoint.sh /usr/local/bin/buildkite-agent-entrypoint
+COPY ./files/.aws/config /root/.aws/config
 
 VOLUME /buildkite
 ENTRYPOINT ["buildkite-agent-entrypoint"]
